@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | FAQ Accordion Card</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+</head>
+
+<body>
+  <main>
+    <div class="container">
+
+      <div class="left">
+        <div style="width: 100%; height: 100%; overflow: hidden;" class="desktop-view"><img
+            src="images/illustration-woman-online-desktop.svg" alt="">
+        </div>
+        <div class="mobile-view">
+          <img src="images/illustration-woman-online-mobile.svg" alt="">
+        </div>
+        <img class="desktop-view" src="images/illustration-box-desktop.svg" alt="" style="position: relative; bottom: 281px; right: 126px;">
+
+      </div>
+      <div class="right">
+
+
+        <h1>FAQ</h1>
+        <div class="accordian-container">
+          <p class="accordian-heading" onclick="clickHandler(event)">How many team members can I invite?<br><span
+              class="accordian-body">
+              You can invite up to 2 additional users on the Free plan. There is no limit on
+              team members for the Premium plan.
+            </span></p>
+          <p class="accordian-heading" onclick="clickHandler(event)">What is the maximum file upload size?<br><span
+              class="accordian-body">
+              No more than 2GB. All files in your account must fit your allotted storage space.
+            </span></p>
+          <p class="accordian-heading" onclick="clickHandler(event)">How do I reset my password?<br><span
+              class="accordian-body">
+              Click “Forgot password” from the login page or “Change password” from your profile page.
+              A reset link will be emailed to you.
+            </span></p>
+          <p class="accordian-heading" onclick="clickHandler(event)">Can I cancel my subscription?<br><span
+              class="accordian-body">
+              Yes! Send us a message and we’ll process your request no questions asked.
+            </span></p>
+          <p class="accordian-heading" onclick="clickHandler(event)">Do you provide additional support?<br><span
+              class="accordian-body">
+              Chat and email support is available 24/7. Phone lines are open during normal business hours.
+            </span></p>
+        </div>
+
+      </div>
+    </div>
+    </div>
+  </main>
+</body>
+<script>
+  function clickHandler(event) {
+    console.log(event.target)
+    if (event.target.children[1].style.display == 'block') {
+      event.target.children[1].style.display = 'none'
+      event.target.style.fontWeight = '400';
+    }
+    else {
+      event.target.children[1].style.display = 'block'
+      event.target.style.fontWeight = '700';
+      event.target.children[1].style.fontWeight = '400';
+    }
+  }
+</script>
+
+</html>

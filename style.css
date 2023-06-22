@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+*{
+    padding: 0;
+    border: 0;
+    margin: 0;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+main{
+    min-height: 100vh;
+    width: 100vw;
+    background: linear-gradient(to bottom right, hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.container{
+    background-color: white;
+    width: 903px;
+    height: 480px;
+    border-radius: 20px;
+    display: flex;
+}
+.left{
+    width: 43%;
+    height: 100%;
+    background: url('images/bg-pattern-desktop.svg');
+    background-position: 387px -293px;
+}
+.left >div> img{
+    position: relative;
+    left: -88px;
+    top: 57px;
+}
+.right{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 40px 60px;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+.right > h1{
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+.accordian-heading{
+    
+    padding: 15px 0;
+    cursor: pointer;
+    border-bottom: solid 1px hsl(240, 5%, 91%);
+    width: 100%;
+    background-color: white;
+    text-align: left;
+}
+.accordian-heading:hover{
+    color: hsl(14, 88%, 65%);
+}
+
+.accordian-body{
+    margin-top: 10px;
+    display: none;
+    font-size: 12px;
+    color: hsl(240, 6%, 50%);
+}
+.mobile-view{
+    display: none;
+}
+@media screen and (max-width: 880px) {
+    .container{
+        flex-direction: column;
+        height: auto;
+        min-width: 320px;
+        width: 70%;
+        margin: 203px 0 100px;
+    }
+    .right{
+        padding: 20px 30px;
+    }
+    .left{
+        width: 100%;
+        background: url('images/bg-pattern-mobile.svg') no-repeat;
+        background-position: center;
+        background-size:contain;
+    }
+    .desktop-view{
+        display: none;
+    }
+    .mobile-view{
+        display: block;
+        width: 90%;
+        margin: auto;
+    }
+    .left >div> img {
+        position: relative;
+        left: 0px;
+        top: -167px;
+    }
+    .right > h1{
+        margin-top: 5px;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+}
